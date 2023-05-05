@@ -39,4 +39,3 @@ while option!="2":
         print("*********There was an error please check your input********************")
         print("************************************************************************")
         print("")
-        # Logs the error appropriately. 
