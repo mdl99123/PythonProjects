@@ -5,15 +5,13 @@ import numpy as np
 option="-1"
 while option!="2":
     try:
-    # 100 linearly spaced numbers
         option="-1"
         x = np.linspace(-5,5,100)
-  
-        # the function, which is y = x^2 here
         print("Please enter the polynomial function in the format of the following example(x**2 + 7*x + 6): ")
         y = input()
+        #has to use the eval function
         y=eval(y)
-        # setting the axes at the centre
+        # setting up the chart properties
         fig = plt.figure()
         ax = fig.add_subplot(1, 1, 1)
         ax.spines['left'].set_position('center')
@@ -28,11 +26,13 @@ while option!="2":
 
         # show the plot
         plt.show()
+        #ask the user if he wants to input more functions
         while option!="1" and option!="2":
             print("Please choose one of the following options: ")
             print("1.- Would you like to enter another function?: ")
             print("2.- Exit the program")
             option=input()
+    #exception in case user inputs function in wrong format
     except Exception as e:
         print("")
         print("***********************************************************************")
